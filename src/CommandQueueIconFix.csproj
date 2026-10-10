@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>CommandQueueIconFix</AssemblyName>
+    <GameDir Condition="'$(GameDir)' == ''">$(ROR2_GAME_DIR)</GameDir>
+    <ProfileDir Condition="'$(ProfileDir)' == ''">$(ROR2_PROFILE_DIR)</ProfileDir>
+  </PropertyGroup>
+  <Target Name="CheckBuildPaths" BeforeTargets="ResolveReferences">
+    <Error Condition="'$(GameDir)' == ''" Text="Set ROR2_GAME_DIR or pass -p:GameDir=... with your Risk of Rain 2 installation directory." />
+    <Error Condition="'$(ProfileDir)' == ''" Text="Set ROR2_PROFILE_DIR or pass -p:ProfileDir=... with your r2modman profile directory." />
+  </Target>
+  <ItemGroup>
+    <Reference Include="BepInEx">
+      <HintPath>$(ProfileDir)\BepInEx\core\BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(ProfileDir)\BepInEx\core\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="LegacyResourcesAPI">
+      <HintPath>$(GameDir)\Risk of Rain 2_Data\Managed\LegacyResourcesAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RoR2">
+      <HintPath>$(GameDir)\Risk of Rain 2_Data\Managed\RoR2.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(GameDir)\Risk of Rain 2_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(GameDir)\Risk of Rain 2_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(GameDir)\Risk of Rain 2_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>$(GameDir)\Risk of Rain 2_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
