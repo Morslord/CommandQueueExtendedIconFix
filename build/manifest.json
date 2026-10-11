@@ -1,9 +1,9 @@
 {
   "name": "CommandQueueExtendedIconFix",
   "author": "morslord",
-  "version_number": "1.0.0",
+  "version_number": "1.2.0",
   "website_url": "https://github.com/Morslord/CommandQueueExtendedIconFix/",
-  "description": "Restores missing item icons in CommandQueueExtended using the game's native ItemIcon UI.",
+  "description": "Restores CommandQueueExtended item icons and adds owned-item counts and configurable inspect tooltips.",
   "dependencies": [
     "gabrielgad-CommandQueueExtended-2.0.0"
   ]
