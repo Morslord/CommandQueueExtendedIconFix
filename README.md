@@ -27,7 +27,7 @@ Only the **lower available-item selection grid** receives the new counters and h
 | [LookingGlass](https://thunderstore.io/c/riskofrain2/p/DropPod/LookingGlass/) | Optional; enhanced descriptions tested with **1.16.1** |
 | r2modman | Recommended for installation and profile management |
 
-**Test history:** The original icon fix was validated in v1.0.0. Tooltips, counters, and tooltip lifetime were validated in v1.1.3; the live position selector in v1.1.4; and the ignore-inspect override and mod icon in v1.1.5. **v1.2.0 retains those features and removes obsolete troubleshooting diagnostics.** This source cleanup itself has not yet been independently tested in-game.
+**Test status:** The original icon fix and the additional tooltip, counter, and in-game settings features have been validated in-game during development. The v1.2.0 source cleanup has not yet been independently tested in-game.
 
 ## Installation
 
@@ -117,4 +117,19 @@ This is an independent compatibility addon, not affiliated with the game develop
 
 ## Release
 
-**1.2.0** — Release cleanup following the fully working 1.1.5 build: removed temporary icon/tooltip diagnostics, kept bounded error logging and tooltip recovery, and prevented recovery from replacing unrelated active tooltips. The icon fix, tooltip modes, inspect override, counters, RiskOfOptions controls, and LookingGlass integration remain unchanged.
+### 1.2.0 — Tooltips, counters and in-game settings
+
+**Changes since the published 1.0.0 release:**
+
+- **Hover item descriptions:** Added native tooltips to the available-item grid. Tooltips follow the game's **Enable Inspect** setting by default.
+- **Tooltip positioning:** Choose **BottomCenter** (default) or **Cursor**.
+- **Independent inspect override:** Added **Ignore Enable Inspect**, allowing Command Queue tooltips even when the game's inspect feature is turned off, without enabling it elsewhere.
+- **Optional LookingGlass support:** Shows enhanced item descriptions and calculated stats when LookingGlass is available, with vanilla descriptions as a fallback.
+- **Owned-item counters:** Displays `x0`, `x1`, and higher counts on the available-item grid. Unowned items (`x0`) appear grey; owned items appear white. These are inventory counts, not queue counts.
+- **Optional RiskOfOptions integration:** Added an in-game dropdown and checkbox, saved through BepInEx and effective immediately—even mid-run. Registers the mod icon when its `icon.png` is available.
+- **More reliable tooltips:** Keeps the native tooltip visible while hovering and prevents the Command Queue tooltip handling from interfering with unrelated tooltips.
+- **Release cleanup:** Reduced diagnostic log noise while retaining useful warnings and error handling. The original icon fix and CommandQueueExtended's queue functionality remain intact.
+
+### 1.0.0 — Initial release
+
+- Restored item icons in CommandQueueExtended's available-item grid by using Risk of Rain 2's native `ItemIcon` instead of outdated `PickupDef.iconSprite` assignments, without modifying `CommandQueue.dll`.
