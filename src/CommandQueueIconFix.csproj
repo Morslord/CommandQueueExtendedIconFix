@@ -28,12 +28,24 @@
       <HintPath>$(GameDir)\Risk of Rain 2_Data\Managed\RoR2.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <Reference Include="com.unity.multiplayer-hlapi.Runtime">
+      <HintPath>$(GameDir)\Risk of Rain 2_Data\Managed\com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>$(GameDir)\Risk of Rain 2_Data\Managed\UnityEngine.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>$(GameDir)\Risk of Rain 2_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>$(GameDir)\Risk of Rain 2_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>$(GameDir)\Risk of Rain 2_Data\Managed\Unity.TextMeshPro.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
@@ -44,5 +56,10 @@
       <HintPath>$(GameDir)\Risk of Rain 2_Data\Managed\UnityEngine.UIModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
+  </ItemGroup>
+  <!-- Optional: embed the actual Thunderstore icon if icon.png is available
+       in the source project. Otherwise the DLL tries its own folder at runtime. -->
+  <ItemGroup Condition="Exists('icon.png')">
+    <EmbeddedResource Include="icon.png" LogicalName="CommandQueueIconFix.icon.png" />
   </ItemGroup>
 </Project>
