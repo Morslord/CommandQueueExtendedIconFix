@@ -1,3 +1,16 @@
+# Changelog
+
+## 1.2.1
+
+### Documentation and package metadata
+- Added a retirement notice and a link to [CommandQueueRemastered](https://thunderstore.io/c/riskofrain2/p/Morslord/CommandQueueRemastered/) in the README.
+- Clarified that CommandQueueRemastered replaces CommandQueueExtended, CommandQueueExtendedIconFix and ProperSave_CommandQueueExtended.
+- Added instructions for switching to Remastered and retained the previous documentation for legacy users.
+- Updated the package description and website URL to direct users to CommandQueueRemastered.
+- No plugin code or behavior changes. The DLL and dependency on CommandQueueExtended are unchanged from 1.2.0.
+
+## 1.2.0
+
 ### Added
 - Item tooltips for the Command Queue selection grid.
 - LookingGlass integration for enhanced item descriptions.

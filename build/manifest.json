@@ -1,9 +1,9 @@
 {
   "name": "CommandQueueExtendedIconFix",
   "author": "morslord",
-  "version_number": "1.2.0",
-  "website_url": "https://github.com/Morslord/CommandQueueExtendedIconFix/",
-  "description": "Restores CommandQueueExtended item icons and adds owned-item counts and configurable inspect tooltips.",
+  "version_number": "1.2.1",
+  "website_url": "https://thunderstore.io/c/riskofrain2/p/Morslord/CommandQueueRemastered/",
+  "description": "Discontinued: CommandQueueRemastered replaces CommandQueueExtended, CommandQueueExtendedIconFix and ProperSave_CommandQueueExtended. Please switch to CommandQueueRemastered.",
   "dependencies": [
     "gabrielgad-CommandQueueExtended-2.0.0"
   ]
